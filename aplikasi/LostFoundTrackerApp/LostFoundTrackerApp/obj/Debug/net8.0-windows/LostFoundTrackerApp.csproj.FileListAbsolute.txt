@@ -1,0 +1,16 @@
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\bin\Debug\net8.0-windows\LostFoundTrackerApp.exe
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\bin\Debug\net8.0-windows\LostFoundTrackerApp.deps.json
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\bin\Debug\net8.0-windows\LostFoundTrackerApp.runtimeconfig.json
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\bin\Debug\net8.0-windows\LostFoundTrackerApp.dll
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\bin\Debug\net8.0-windows\LostFoundTrackerApp.pdb
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.Form1.resources
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.csproj.GenerateResource.cache
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.AssemblyInfoInputs.cache
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.AssemblyInfo.cs
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.csproj.CoreCompileInputs.cache
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.dll
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\refint\LostFoundTrackerApp.dll
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.pdb
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.genruntimeconfig.cache
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\ref\LostFoundTrackerApp.dll
