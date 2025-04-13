@@ -19,6 +19,10 @@
 ## 📌 Deskripsi
 **Lost & Found Tracker** adalah aplikasi yang membantu dalam mencatat dan mengelola barang hilang dan ditemukan di suatu tempat misalnya kantor, sekolah, pusat perbelanjaan, dll. Dengan aplikasi ini, barang yang hilang dapat dilaporkan, dicari, dan dikembalikan ke pemiliknya dengan lebih mudah.
 
+## 🎨 Desain Aplikasi
+- [**Desain Figma**](https://www.figma.com/design/P9XiXM5ZQeykpzJP3anWK9/Lost---Found-Tracker?node-id=0-1&m=dev&t=7rdMRl0pBjc9zPOd-1)
+- [**Prototype Figma**](https://www.figma.com/proto/P9XiXM5ZQeykpzJP3anWK9/Lost---Found-Tracker?node-id=0-1&t=7rdMRl0pBjc9zPOd-1)
+
 ## 🚀 Fitur Utama
 ### ✅ CRUD Barang Hilang & Ditemukan
 - **Create:** Admin mencatat barang yang ditemukan dengan deskripsi, lokasi, dan foto.
