@@ -1,4 +1,5 @@
 # 📦 Lost & Found Tracker
+![LOGO](https://github.com/user-attachments/assets/a3590a33-dbf9-4823-bb55-185cd3f8fda9)
 
 ## 🧑 Identitas Mahasiswa
 <table>
