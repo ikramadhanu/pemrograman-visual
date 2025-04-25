@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            closeLogin = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -40,6 +41,7 @@
             checkBox1 = new CheckBox();
             button1 = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)closeLogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -47,6 +49,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 186, 46);
+            panel1.Controls.Add(closeLogin);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
@@ -54,6 +57,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(856, 97);
             panel1.TabIndex = 0;
+            // 
+            // closeLogin
+            // 
+            closeLogin.Image = (Image)resources.GetObject("closeLogin.Image");
+            closeLogin.Location = new Point(793, 33);
+            closeLogin.Name = "closeLogin";
+            closeLogin.Size = new Size(32, 31);
+            closeLogin.SizeMode = PictureBoxSizeMode.Zoom;
+            closeLogin.TabIndex = 2;
+            closeLogin.TabStop = false;
+            closeLogin.Click += closeLogin_Click;
             // 
             // pictureBox2
             // 
@@ -160,6 +174,7 @@
             Text = "Lost & Found Tracker";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)closeLogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -178,5 +193,6 @@
         private Label label3;
         private CheckBox checkBox1;
         private Button button1;
+        private PictureBox closeLogin;
     }
 }

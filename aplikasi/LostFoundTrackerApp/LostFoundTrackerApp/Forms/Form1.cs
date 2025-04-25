@@ -31,5 +31,10 @@ namespace LostFoundTrackerApp
                 conn.Close();
             }
         }
+
+        private void closeLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
