@@ -50,3 +50,4 @@ D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\Lost
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.genruntimeconfig.cache
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\ref\LostFoundTrackerApp.dll
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.Properties.Resources.resources
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.Forms.formDashboard.resources
