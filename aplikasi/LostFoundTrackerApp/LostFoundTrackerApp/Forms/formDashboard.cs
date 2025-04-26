@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LostFoundTrackerApp.UserControls;
 
 namespace LostFoundTrackerApp.Forms
 {
@@ -15,6 +16,33 @@ namespace LostFoundTrackerApp.Forms
         public formDashboard()
         {
             InitializeComponent();
+            dashboard1.BringToFront();
+            labelTitle.Text = "Dashboard";
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            dashboard1.BringToFront();
+            labelTitle.Text = "Dashboard";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            inputBarang1.BringToFront();
+            labelTitle.Text = "Input Barang";
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

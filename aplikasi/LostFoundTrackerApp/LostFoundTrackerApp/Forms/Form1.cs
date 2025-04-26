@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using LostFoundTrackerApp.Forms;
 using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 
@@ -35,6 +36,13 @@ namespace LostFoundTrackerApp
         private void closeLogin_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formDashboard obj = new formDashboard();
+            obj.Show();
+            this.Hide();
         }
     }
 }
