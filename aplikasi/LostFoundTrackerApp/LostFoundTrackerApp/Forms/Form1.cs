@@ -40,9 +40,45 @@ namespace LostFoundTrackerApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formDashboard obj = new formDashboard();
-            obj.Show();
-            this.Hide();
+            // Connect Database
+            string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
+            MySqlConnection conn = new MySqlConnection(connstring);
+
+            string username = this.username.Text;
+            string password = this.password.Text;
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM admin WHERE username=@username AND password=@password";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Login berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    formDashboard obj = new formDashboard();
+                    obj.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

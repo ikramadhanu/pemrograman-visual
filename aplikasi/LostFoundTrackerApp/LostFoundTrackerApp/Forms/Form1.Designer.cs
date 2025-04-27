@@ -34,8 +34,8 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            username = new TextBox();
+            password = new TextBox();
             label2 = new Label();
             label3 = new Label();
             checkBox1 = new CheckBox();
@@ -99,19 +99,19 @@
             label1.TabIndex = 1;
             label1.Text = "Please Login First";
             // 
-            // textBox1
+            // username
             // 
-            textBox1.Location = new Point(236, 231);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(392, 27);
-            textBox1.TabIndex = 2;
+            username.Location = new Point(236, 231);
+            username.Name = "username";
+            username.Size = new Size(392, 27);
+            username.TabIndex = 2;
             // 
-            // textBox2
+            // password
             // 
-            textBox2.Location = new Point(236, 301);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(392, 27);
-            textBox2.TabIndex = 3;
+            password.Location = new Point(236, 301);
+            password.Name = "password";
+            password.Size = new Size(392, 27);
+            password.TabIndex = 3;
             // 
             // label2
             // 
@@ -165,8 +165,8 @@
             Controls.Add(checkBox1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(password);
+            Controls.Add(username);
             Controls.Add(label1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -188,8 +188,8 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox username;
+        private TextBox password;
         private Label label2;
         private Label label3;
         private CheckBox checkBox1;
