@@ -52,6 +52,7 @@
             panelContainer = new Panel();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
+            klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -129,6 +130,7 @@
             label4.Size = new Size(133, 22);
             label4.TabIndex = 1;
             label4.Text = "Klaim Barang";
+            label4.Click += label4_Click;
             // 
             // pictureBox5
             // 
@@ -272,6 +274,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(klaimBarang1);
             panelContainer.Controls.Add(inputBarang1);
             panelContainer.Controls.Add(dashboard1);
             panelContainer.Location = new Point(240, 80);
@@ -293,6 +296,14 @@
             dashboard1.Name = "dashboard1";
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
+            // 
+            // klaimBarang1
+            // 
+            klaimBarang1.Dock = DockStyle.Fill;
+            klaimBarang1.Location = new Point(0, 0);
+            klaimBarang1.Name = "klaimBarang1";
+            klaimBarang1.Size = new Size(700, 446);
+            klaimBarang1.TabIndex = 5;
             // 
             // formDashboard
             // 
@@ -354,5 +365,6 @@
         private Panel panelContainer;
         private dashboard dashboard1;
         private UserControls.inputBarang inputBarang1;
+        private UserControls.klaimBarang klaimBarang1;
     }
 }

@@ -44,5 +44,11 @@ namespace LostFoundTrackerApp.Forms
         {
             Application.Exit();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            klaimBarang1.BringToFront();
+            labelTitle.Text = "Klaim Barang";
+        }
     }
 }
