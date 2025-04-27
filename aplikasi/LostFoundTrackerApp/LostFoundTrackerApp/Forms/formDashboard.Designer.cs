@@ -50,9 +50,10 @@
             labelTitle = new Label();
             pictureBox7 = new PictureBox();
             panelContainer = new Panel();
+            aboutUs1 = new LostFoundTrackerApp.UserControls.aboutUs();
+            klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
-            klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -101,6 +102,7 @@
             label5.Size = new Size(138, 22);
             label5.TabIndex = 1;
             label5.Text = "Tentang Kami";
+            label5.Click += label5_Click;
             // 
             // pictureBox6
             // 
@@ -274,6 +276,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(aboutUs1);
             panelContainer.Controls.Add(klaimBarang1);
             panelContainer.Controls.Add(inputBarang1);
             panelContainer.Controls.Add(dashboard1);
@@ -281,6 +284,22 @@
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(700, 446);
             panelContainer.TabIndex = 4;
+            // 
+            // aboutUs1
+            // 
+            aboutUs1.Location = new Point(0, 0);
+            aboutUs1.Name = "aboutUs1";
+            aboutUs1.Size = new Size(707, 446);
+            aboutUs1.TabIndex = 5;
+            // 
+            // klaimBarang1
+            // 
+            klaimBarang1.Dock = DockStyle.Fill;
+            klaimBarang1.Location = new Point(0, 0);
+            klaimBarang1.Name = "klaimBarang1";
+            klaimBarang1.Size = new Size(700, 446);
+            klaimBarang1.TabIndex = 5;
+            klaimBarang1.Load += klaimBarang1_Load;
             // 
             // inputBarang1
             // 
@@ -296,14 +315,6 @@
             dashboard1.Name = "dashboard1";
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
-            // 
-            // klaimBarang1
-            // 
-            klaimBarang1.Dock = DockStyle.Fill;
-            klaimBarang1.Location = new Point(0, 0);
-            klaimBarang1.Name = "klaimBarang1";
-            klaimBarang1.Size = new Size(700, 446);
-            klaimBarang1.TabIndex = 5;
             // 
             // formDashboard
             // 
@@ -366,5 +377,6 @@
         private dashboard dashboard1;
         private UserControls.inputBarang inputBarang1;
         private UserControls.klaimBarang klaimBarang1;
+        private UserControls.aboutUs aboutUs1;
     }
 }

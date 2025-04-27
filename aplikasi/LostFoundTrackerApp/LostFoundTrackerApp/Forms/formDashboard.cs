@@ -50,5 +50,16 @@ namespace LostFoundTrackerApp.Forms
             klaimBarang1.BringToFront();
             labelTitle.Text = "Klaim Barang";
         }
+
+        private void klaimBarang1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            aboutUs1.BringToFront();
+            labelTitle.Text = "About Us";
+        }
     }
 }
