@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LostFoundTrackerApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab8b01d7793a55b476793e14ea38d9ddd3aa79ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d736686e088f32747d0f348a0fba2b4ffc1ed4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LostFoundTrackerApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LostFoundTrackerApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

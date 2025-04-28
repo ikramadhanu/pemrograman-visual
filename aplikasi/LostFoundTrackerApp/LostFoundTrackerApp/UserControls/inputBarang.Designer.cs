@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textName = new TextBox();
+            textDesc = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            textLocation = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            textFounder = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            button1 = new Button();
+            dateTimePickerFound = new DateTimePicker();
+            buttonSave = new Button();
             SuspendLayout();
             // 
             // label1
@@ -51,19 +51,19 @@
             label1.TabIndex = 0;
             label1.Text = "Nama Item";
             // 
-            // textBox1
+            // textName
             // 
-            textBox1.Location = new Point(31, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(617, 27);
-            textBox1.TabIndex = 1;
+            textName.Location = new Point(31, 55);
+            textName.Name = "textName";
+            textName.Size = new Size(617, 27);
+            textName.TabIndex = 1;
             // 
-            // textBox2
+            // textDesc
             // 
-            textBox2.Location = new Point(31, 126);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(617, 27);
-            textBox2.TabIndex = 3;
+            textDesc.Location = new Point(31, 126);
+            textDesc.Name = "textDesc";
+            textDesc.Size = new Size(617, 27);
+            textDesc.TabIndex = 3;
             // 
             // label2
             // 
@@ -75,12 +75,12 @@
             label2.TabIndex = 2;
             label2.Text = "Deskripsi Item";
             // 
-            // textBox3
+            // textLocation
             // 
-            textBox3.Location = new Point(31, 198);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(617, 27);
-            textBox3.TabIndex = 5;
+            textLocation.Location = new Point(31, 198);
+            textLocation.Name = "textLocation";
+            textLocation.Size = new Size(617, 27);
+            textLocation.TabIndex = 5;
             // 
             // label3
             // 
@@ -92,12 +92,12 @@
             label3.TabIndex = 4;
             label3.Text = "Lokasi Penemuan";
             // 
-            // textBox4
+            // textFounder
             // 
-            textBox4.Location = new Point(31, 273);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(617, 27);
-            textBox4.TabIndex = 7;
+            textFounder.Location = new Point(31, 273);
+            textFounder.Name = "textFounder";
+            textFounder.Size = new Size(617, 27);
+            textFounder.TabIndex = 7;
             // 
             // label4
             // 
@@ -119,39 +119,40 @@
             label5.TabIndex = 8;
             label5.Text = "Tanggal Penemuan";
             // 
-            // dateTimePicker1
+            // dateTimePickerFound
             // 
-            dateTimePicker1.Location = new Point(31, 347);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 9;
+            dateTimePickerFound.Location = new Point(31, 347);
+            dateTimePickerFound.Name = "dateTimePickerFound";
+            dateTimePickerFound.Size = new Size(250, 27);
+            dateTimePickerFound.TabIndex = 9;
             // 
-            // button1
+            // buttonSave
             // 
-            button1.BackColor = Color.FromArgb(255, 186, 46);
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Font = new Font("Audiowide", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(515, 347);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 44);
-            button1.TabIndex = 10;
-            button1.Text = "SAVE";
-            button1.UseVisualStyleBackColor = false;
+            buttonSave.BackColor = Color.FromArgb(255, 186, 46);
+            buttonSave.BackgroundImageLayout = ImageLayout.None;
+            buttonSave.Font = new Font("Audiowide", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSave.Location = new Point(515, 347);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(133, 44);
+            buttonSave.TabIndex = 10;
+            buttonSave.Text = "SAVE";
+            buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
             // 
             // inputBarang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(buttonSave);
+            Controls.Add(dateTimePickerFound);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(textFounder);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(textLocation);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(textDesc);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(textName);
             Controls.Add(label1);
             Name = "inputBarang";
             Size = new Size(700, 446);
@@ -162,15 +163,15 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textName;
+        private TextBox textDesc;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox textLocation;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox textFounder;
         private Label label4;
         private Label label5;
-        private DateTimePicker dateTimePicker1;
-        private Button button1;
+        private DateTimePicker dateTimePickerFound;
+        private Button buttonSave;
     }
 }

@@ -19,5 +19,8 @@
     <Compile Update="UserControls\klaimBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\listBarang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

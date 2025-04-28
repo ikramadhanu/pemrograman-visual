@@ -1,35 +1,38 @@
-using System.Linq.Expressions;
+using System;
+using System.Windows.Forms;
 using LostFoundTrackerApp.Forms;
-using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 
 namespace LostFoundTrackerApp
 {
     public partial class Form1 : Form
     {
+        // Publisher untuk event login
+        private LoginEventPublisher publisher;
+        private LoginEventSubscriber subscriber;
+
         public Form1()
         {
             InitializeComponent();
+            publisher = new LoginEventPublisher();
+            subscriber = new LoginEventSubscriber(this);
+            publisher.OnLoginAttempt += subscriber.OnLoginReceived;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Connect Database
             string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-            MySqlConnection conn = new MySqlConnection(connstring);
-
-            try
+            using (MySqlConnection conn = new MySqlConnection(connstring))
             {
-                conn.Open();
-                MessageBox.Show("KONEKSI BERHASIL", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                try
+                {
+                    conn.Open();
+                    MessageBox.Show("KONEKSI BERHASIL", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -40,45 +43,72 @@ namespace LostFoundTrackerApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Connect Database
-            string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-            MySqlConnection conn = new MySqlConnection(connstring);
-
             string username = this.username.Text;
             string password = this.password.Text;
 
-            try
+            // Publisher menerbitkan event
+            publisher.AttemptLogin(username, password);
+        }
+    }
+
+    public class LoginEventPublisher
+    {
+        // Event untuk memberitahukan status login
+        public event Action<string, bool> OnLoginAttempt;
+
+        public void AttemptLogin(string username, string password)
+        {
+            bool isSuccess = CheckLogin(username, password);
+            OnLoginAttempt?.Invoke(username, isSuccess);
+        }
+
+        private bool CheckLogin(string username, string password)
+        {
+            string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
+            using (MySqlConnection conn = new MySqlConnection(connstring))
             {
-                conn.Open();
-                string query = "SELECT COUNT(*) FROM admin WHERE username=@username AND password=@password";
-
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-                if (count > 0)
+                try
                 {
-                    MessageBox.Show("Login berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM admin WHERE username=@username AND password=@password";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
 
-                    formDashboard obj = new formDashboard();
-                    obj.Show();
-                    this.Hide();
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Username atau Password salah.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
     }
+
+    public class LoginEventSubscriber
+    {
+        private Form1 formLogin; // Tambahkan referensi ke form login
+
+        public LoginEventSubscriber(Form1 form)
+        {
+            this.formLogin = form;
+        }
+
+        public void OnLoginReceived(string username, bool isSuccess)
+        {
+            if (isSuccess)
+            {
+                MessageBox.Show($"Login berhasil untuk user: {username}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                formDashboard dashboard = new formDashboard();
+                dashboard.Show();
+                formLogin.Hide(); // Hide form login setelah dashboard tampil
+            }
+            else
+            {
+                MessageBox.Show($"Login gagal untuk user: {username}", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+
 }
