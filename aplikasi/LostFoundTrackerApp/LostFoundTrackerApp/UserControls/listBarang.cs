@@ -7,14 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listBarang : UserControl
     {
+        string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
+        MySqlConnection conn;
+        MySqlDataReader dr;
+
         public listBarang()
         {
             InitializeComponent();
+            conn = new MySqlConnection(connstring);
+        }
+
+        public void loadRecord()
+        {
+            dataGridView1.Rows.Clear();
+            conn.Open();
+            string query = "SELECT * FROM items";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, dr["id"].ToString(), dr["item_name"].ToString(), dr["description"].ToString(), dr["location_found"].ToString(), dr["founder"].ToString(), dr["date_found"].ToString());
+            }
+            dr.Close();
+            conn.Close();
+        }
+
+        private void listBarang_Load(object sender, EventArgs e)
+        {
+            loadRecord();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loadRecord();
         }
     }
 }

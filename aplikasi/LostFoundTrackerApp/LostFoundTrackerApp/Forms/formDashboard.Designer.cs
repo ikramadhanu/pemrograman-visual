@@ -46,7 +46,6 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
             labelTitle = new Label();
             pictureBox7 = new PictureBox();
             panelContainer = new Panel();
@@ -54,6 +53,7 @@
             klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
+            listBarang1 = new LostFoundTrackerApp.UserControls.listBarang();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -162,6 +162,7 @@
             label3.Size = new Size(121, 22);
             label3.TabIndex = 1;
             label3.Text = "List Barang";
+            label3.Click += label3_Click;
             // 
             // pictureBox4
             // 
@@ -245,14 +246,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(255, 186, 46);
-            panel2.Location = new Point(238, -11);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(709, 32);
-            panel2.TabIndex = 1;
-            // 
             // labelTitle
             // 
             labelTitle.AutoSize = true;
@@ -276,6 +269,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(listBarang1);
             panelContainer.Controls.Add(aboutUs1);
             panelContainer.Controls.Add(klaimBarang1);
             panelContainer.Controls.Add(inputBarang1);
@@ -316,6 +310,13 @@
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
             // 
+            // listBarang1
+            // 
+            listBarang1.Location = new Point(0, 3);
+            listBarang1.Name = "listBarang1";
+            listBarang1.Size = new Size(875, 558);
+            listBarang1.TabIndex = 5;
+            // 
             // formDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -324,7 +325,6 @@
             Controls.Add(panelContainer);
             Controls.Add(pictureBox7);
             Controls.Add(labelTitle);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "formDashboard";
             Text = "formDashboard";
@@ -354,7 +354,6 @@
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
         private PictureBox pictureBox1;
         private Panel panel7;
         private Label label5;
@@ -378,5 +377,6 @@
         private UserControls.inputBarang inputBarang1;
         private UserControls.klaimBarang klaimBarang1;
         private UserControls.aboutUs aboutUs1;
+        private UserControls.listBarang listBarang1;
     }
 }
