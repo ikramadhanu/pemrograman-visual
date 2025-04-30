@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashboard));
             panel1 = new Panel();
+            panel2 = new Panel();
+            label6 = new Label();
+            pictureBox8 = new PictureBox();
             panel7 = new Panel();
             label5 = new Label();
             pictureBox6 = new PictureBox();
@@ -49,12 +52,15 @@
             labelTitle = new Label();
             pictureBox7 = new PictureBox();
             panelContainer = new Panel();
+            listKlaim1 = new LostFoundTrackerApp.UserControls.listKlaim();
+            listBarang1 = new LostFoundTrackerApp.UserControls.listBarang();
             aboutUs1 = new LostFoundTrackerApp.UserControls.aboutUs();
             klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
-            listBarang1 = new LostFoundTrackerApp.UserControls.listBarang();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel6.SuspendLayout();
@@ -73,6 +79,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 186, 46);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel5);
@@ -84,11 +91,41 @@
             panel1.Size = new Size(241, 540);
             panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(pictureBox8);
+            panel2.Location = new Point(13, 365);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(205, 49);
+            panel2.TabIndex = 4;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Audiowide", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(58, 13);
+            label6.Name = "label6";
+            label6.Size = new Size(143, 22);
+            label6.TabIndex = 1;
+            label6.Text = "Riwayat Klaim";
+            label6.Click += label6_Click;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(7, 7);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(47, 33);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 0;
+            pictureBox8.TabStop = false;
+            // 
             // panel7
             // 
             panel7.Controls.Add(label5);
             panel7.Controls.Add(pictureBox6);
-            panel7.Location = new Point(13, 391);
+            panel7.Location = new Point(13, 423);
             panel7.Name = "panel7";
             panel7.Size = new Size(205, 49);
             panel7.TabIndex = 3;
@@ -118,7 +155,7 @@
             // 
             panel6.Controls.Add(label4);
             panel6.Controls.Add(pictureBox5);
-            panel6.Location = new Point(13, 333);
+            panel6.Location = new Point(13, 306);
             panel6.Name = "panel6";
             panel6.Size = new Size(196, 49);
             panel6.TabIndex = 3;
@@ -148,7 +185,7 @@
             // 
             panel5.Controls.Add(label3);
             panel5.Controls.Add(pictureBox4);
-            panel5.Location = new Point(13, 274);
+            panel5.Location = new Point(13, 247);
             panel5.Name = "panel5";
             panel5.Size = new Size(185, 49);
             panel5.TabIndex = 3;
@@ -178,7 +215,7 @@
             // 
             panel4.Controls.Add(label2);
             panel4.Controls.Add(pictureBox3);
-            panel4.Location = new Point(13, 216);
+            panel4.Location = new Point(13, 189);
             panel4.Name = "panel4";
             panel4.Size = new Size(196, 49);
             panel4.TabIndex = 3;
@@ -209,7 +246,7 @@
             // 
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(13, 157);
+            panel3.Location = new Point(13, 130);
             panel3.Name = "panel3";
             panel3.Size = new Size(185, 49);
             panel3.TabIndex = 2;
@@ -239,9 +276,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(80, 23);
+            pictureBox1.Location = new Point(83, 23);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(84, 112);
+            pictureBox1.Size = new Size(78, 91);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -269,6 +306,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(listKlaim1);
             panelContainer.Controls.Add(listBarang1);
             panelContainer.Controls.Add(aboutUs1);
             panelContainer.Controls.Add(klaimBarang1);
@@ -278,6 +316,20 @@
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(700, 446);
             panelContainer.TabIndex = 4;
+            // 
+            // listKlaim1
+            // 
+            listKlaim1.Location = new Point(0, 1);
+            listKlaim1.Name = "listKlaim1";
+            listKlaim1.Size = new Size(712, 448);
+            listKlaim1.TabIndex = 5;
+            // 
+            // listBarang1
+            // 
+            listBarang1.Location = new Point(0, 3);
+            listBarang1.Name = "listBarang1";
+            listBarang1.Size = new Size(875, 558);
+            listBarang1.TabIndex = 5;
             // 
             // aboutUs1
             // 
@@ -310,13 +362,6 @@
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
             // 
-            // listBarang1
-            // 
-            listBarang1.Location = new Point(0, 3);
-            listBarang1.Name = "listBarang1";
-            listBarang1.Size = new Size(875, 558);
-            listBarang1.TabIndex = 5;
-            // 
             // formDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -329,6 +374,9 @@
             Name = "formDashboard";
             Text = "formDashboard";
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -378,5 +426,9 @@
         private UserControls.klaimBarang klaimBarang1;
         private UserControls.aboutUs aboutUs1;
         private UserControls.listBarang listBarang1;
+        private Panel panel2;
+        private Label label6;
+        private PictureBox pictureBox8;
+        private UserControls.listKlaim listKlaim1;
     }
 }

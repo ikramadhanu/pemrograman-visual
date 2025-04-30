@@ -22,5 +22,8 @@
     <Compile Update="UserControls\listBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\listKlaim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
