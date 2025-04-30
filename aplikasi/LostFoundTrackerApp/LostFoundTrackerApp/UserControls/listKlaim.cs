@@ -41,5 +41,52 @@ namespace LostFoundTrackerApp.UserControls
         {
             loadRecord();
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            loadRecord();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            string deleteId = textBoxDelete.Text.Trim();
+
+            if (string.IsNullOrEmpty(deleteId))
+            {
+                MessageBox.Show("Silakan masukkan ID yang ingin dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data dengan ID: " + deleteId + "?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "DELETE FROM items WHERE id = @id";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", deleteId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    conn.Close();
+                    textBoxDelete.Clear();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadRecord();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data dengan ID tersebut tidak ditemukan.", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

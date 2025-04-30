@@ -81,7 +81,7 @@ namespace LostFoundTrackerApp.UserControls
                     dr["date_found"].ToString()
                 );
             }
-
+            textBoxSearch.Clear();
             dr.Close();
             conn.Close();
 

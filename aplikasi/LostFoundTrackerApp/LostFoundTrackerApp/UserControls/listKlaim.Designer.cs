@@ -31,9 +31,9 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            button1 = new Button();
+            buttonDelete = new Button();
+            textBoxDelete = new TextBox();
+            buttonRefresh = new Button();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -54,36 +54,38 @@
             label1.TabIndex = 30;
             label1.Text = "Hapus ID :";
             // 
-            // button2
+            // buttonDelete
             // 
-            button2.BackColor = Color.FromArgb(255, 186, 46);
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Audiowide", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(589, 33);
-            button2.Name = "button2";
-            button2.Size = new Size(95, 27);
-            button2.TabIndex = 29;
-            button2.Text = "Hapus";
-            button2.UseVisualStyleBackColor = false;
+            buttonDelete.BackColor = Color.FromArgb(255, 186, 46);
+            buttonDelete.BackgroundImageLayout = ImageLayout.None;
+            buttonDelete.Font = new Font("Audiowide", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonDelete.Location = new Point(589, 33);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(95, 27);
+            buttonDelete.TabIndex = 29;
+            buttonDelete.Text = "Hapus";
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
             // 
-            // textBox1
+            // textBoxDelete
             // 
-            textBox1.Location = new Point(468, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(115, 27);
-            textBox1.TabIndex = 28;
+            textBoxDelete.Location = new Point(468, 33);
+            textBoxDelete.Name = "textBoxDelete";
+            textBoxDelete.Size = new Size(115, 27);
+            textBoxDelete.TabIndex = 28;
             // 
-            // button1
+            // buttonRefresh
             // 
-            button1.BackColor = Color.FromArgb(255, 186, 46);
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Font = new Font("Audiowide", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(17, 33);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 27);
-            button1.TabIndex = 27;
-            button1.Text = "Refresh";
-            button1.UseVisualStyleBackColor = false;
+            buttonRefresh.BackColor = Color.FromArgb(255, 186, 46);
+            buttonRefresh.BackgroundImageLayout = ImageLayout.None;
+            buttonRefresh.Font = new Font("Audiowide", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonRefresh.Location = new Point(17, 33);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(115, 27);
+            buttonRefresh.TabIndex = 27;
+            buttonRefresh.Text = "Refresh";
+            buttonRefresh.UseVisualStyleBackColor = false;
+            buttonRefresh.Click += buttonRefresh_Click;
             // 
             // dataGridView1
             // 
@@ -167,9 +169,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(buttonDelete);
+            Controls.Add(textBoxDelete);
+            Controls.Add(buttonRefresh);
             Controls.Add(dataGridView1);
             Name = "listKlaim";
             Size = new Size(700, 446);
@@ -182,9 +184,9 @@
         #endregion
 
         private Label label1;
-        private Button button2;
-        private TextBox textBox1;
-        private Button button1;
+        private Button buttonDelete;
+        private TextBox textBoxDelete;
+        private Button buttonRefresh;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
