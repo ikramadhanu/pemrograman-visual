@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimeClaim = new DateTimePicker();
             label5 = new Label();
-            textBox4 = new TextBox();
+            textClaimContact = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            textClaimName = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            textDescBukti = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            textID = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -52,13 +52,14 @@
             button1.TabIndex = 21;
             button1.Text = "SAVE";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // dateTimePicker1
+            // dateTimeClaim
             // 
-            dateTimePicker1.Location = new Point(42, 363);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 20;
+            dateTimeClaim.Location = new Point(42, 363);
+            dateTimeClaim.Name = "dateTimeClaim";
+            dateTimeClaim.Size = new Size(250, 27);
+            dateTimeClaim.TabIndex = 20;
             // 
             // label5
             // 
@@ -70,12 +71,12 @@
             label5.TabIndex = 19;
             label5.Text = "Tanggal Klaim";
             // 
-            // textBox4
+            // textClaimContact
             // 
-            textBox4.Location = new Point(42, 289);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(617, 27);
-            textBox4.TabIndex = 18;
+            textClaimContact.Location = new Point(42, 289);
+            textClaimContact.Name = "textClaimContact";
+            textClaimContact.Size = new Size(617, 27);
+            textClaimContact.TabIndex = 18;
             // 
             // label4
             // 
@@ -87,12 +88,12 @@
             label4.TabIndex = 17;
             label4.Text = "Info Kontak Penglaim";
             // 
-            // textBox3
+            // textClaimName
             // 
-            textBox3.Location = new Point(42, 214);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(617, 27);
-            textBox3.TabIndex = 16;
+            textClaimName.Location = new Point(42, 214);
+            textClaimName.Name = "textClaimName";
+            textClaimName.Size = new Size(617, 27);
+            textClaimName.TabIndex = 16;
             // 
             // label3
             // 
@@ -104,12 +105,12 @@
             label3.TabIndex = 15;
             label3.Text = "Nama Penglaim";
             // 
-            // textBox2
+            // textDescBukti
             // 
-            textBox2.Location = new Point(42, 142);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(617, 27);
-            textBox2.TabIndex = 14;
+            textDescBukti.Location = new Point(42, 142);
+            textDescBukti.Name = "textDescBukti";
+            textDescBukti.Size = new Size(617, 27);
+            textDescBukti.TabIndex = 14;
             // 
             // label2
             // 
@@ -121,12 +122,12 @@
             label2.TabIndex = 13;
             label2.Text = "Deskripsi Pembuktian";
             // 
-            // textBox1
+            // textID
             // 
-            textBox1.Location = new Point(42, 71);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(617, 27);
-            textBox1.TabIndex = 12;
+            textID.Location = new Point(42, 71);
+            textID.Name = "textID";
+            textID.Size = new Size(617, 27);
+            textID.TabIndex = 12;
             // 
             // label1
             // 
@@ -143,15 +144,15 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateTimeClaim);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(textClaimContact);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(textClaimName);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(textDescBukti);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(textID);
             Controls.Add(label1);
             Name = "klaimBarang";
             Size = new Size(700, 446);
@@ -162,15 +163,15 @@
         #endregion
 
         private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimeClaim;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox textClaimContact;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox textClaimName;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox textDescBukti;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox textID;
         private Label label1;
     }
 }
