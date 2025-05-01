@@ -1,5 +1,5 @@
 # 📦 Lost & Found Tracker
-![LOGO](https://github.com/user-attachments/assets/a3590a33-dbf9-4823-bb55-185cd3f8fda9)
+<img src="https://github.com/user-attachments/assets/a3590a33-dbf9-4823-bb55-185cd3f8fda9" width="300"/>
 
 ## 🧑 Identitas Mahasiswa
 <table>
@@ -26,22 +26,17 @@
 
 ## 🚀 Fitur Utama
 ### ✅ CRUD Barang Hilang & Ditemukan
-- **Create:** Admin mencatat barang yang ditemukan dengan deskripsi, lokasi, dan foto.
+- **Create:** Admin mencatat barang yang ditemukan dengan deskripsi dan lokasi.
 - **Read:** Menampilkan daftar barang hilang & ditemukan.
 - **Update:** Admin dapat memperbarui status barang (tersedia/sudah diklaim).
-- **Delete:** Menghapus barang yang sudah dikembalikan atau tidak relevan.
+- **Delete:** Menghapus barang yang sudah dikembalikan.
 
 ### 🔍 Pencarian & Filter
-- Filter berdasarkan **jenis barang, lokasi ditemukan, dan tanggal ditemukan**.
-- Pencarian cepat berdasarkan kata kunci.
+- Filter berdasarkan **Nama Barang**.
 
 ### 📩 Sistem Klaim Barang
 - Pemilik dapat menghubungi admin untuk mengambil barangnya.
-- Verifikasi kepemilikan dengan bukti deskripsi atau foto.
-- Verifikasi kepemilikan dengan menjawab beberapa kuis/trivia terkait barang yang akan diklaim.
-
-### 📢 Notifikasi Pemberitahuan
-- Admin mendapat pemberitahuan jika ada barang baru.
+- Verifikasi kepemilikan dengan bukti deskripsi.
 
 ## 🏢 Penggunaan
 Aplikasi ini cocok digunakan di:
@@ -49,3 +44,25 @@ Aplikasi ini cocok digunakan di:
 - **Kantor** 🏢 → Mengorganisir barang karyawan yang lupa.
 - **Mall & Pusat Perbelanjaan** 🛍️ → Meningkatkan layanan pelanggan.
 - **Transportasi Umum** 🚆 → Memudahkan pengembalian barang tertinggal.
+
+## 💻 Tampilan Aplikasi
+### Halaman Login
+![1  login](https://github.com/user-attachments/assets/07c97bb4-ce5e-44be-80c5-0d07945660de)
+
+### Halaman Dashboard
+![2  dashboard](https://github.com/user-attachments/assets/3b409998-5258-4181-a3a3-06c11c7188d3)
+
+### Halaman Input Barang
+![3  input barang](https://github.com/user-attachments/assets/529f1e38-06a3-4609-b75a-20442050810b)
+
+### Halaman List Barang Temuan
+![4  list barang](https://github.com/user-attachments/assets/6eca7d6d-90c3-448c-bc28-d3cd833bd11d)
+
+### Halaman Klaim
+![6  input klaim](https://github.com/user-attachments/assets/b5eb338c-0177-4950-b565-ce35f605ae1c)
+
+### Halaman Riwayat
+![7  riwayat klaim](https://github.com/user-attachments/assets/c7460e7b-2c1f-499a-bd2b-9415959eee9d)
+
+### Halaman About Us
+![9  about](https://github.com/user-attachments/assets/f79ab353-432b-4003-a789-0362f938b243)
