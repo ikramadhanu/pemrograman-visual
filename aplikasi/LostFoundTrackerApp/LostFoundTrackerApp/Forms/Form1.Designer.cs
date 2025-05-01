@@ -38,7 +38,6 @@
             password = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            checkBox1 = new CheckBox();
             button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeLogin).BeginInit();
@@ -133,17 +132,6 @@
             label3.TabIndex = 5;
             label3.Text = "Password";
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Offside", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(361, 345);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(132, 21);
-            checkBox1.TabIndex = 7;
-            checkBox1.Text = "Remember Me?";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 186, 46);
@@ -162,7 +150,6 @@
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(856, 484);
             Controls.Add(button1);
-            Controls.Add(checkBox1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(password);
@@ -192,7 +179,6 @@
         private TextBox password;
         private Label label2;
         private Label label3;
-        private CheckBox checkBox1;
         private Button button1;
         private PictureBox closeLogin;
     }
