@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using LostFoundTrackerApp.Helpers;  // Mengimpor namespace Helpers
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class inputBarang : UserControl
     {
-        string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-        MySqlConnection conn;
+        private DatabaseHelper dbHelper;  // Deklarasi objek DatabaseHelper
         public inputBarang()
         {
             InitializeComponent();
-            conn = new MySqlConnection(connstring);
+            dbHelper = new DatabaseHelper();  // Membuat instance DatabaseHelper
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -30,9 +30,9 @@ namespace LostFoundTrackerApp.UserControls
             }
             else
             {
-                conn.Open();
+                dbHelper.OpenConnection();  // Membuka koneksi ke database
                 string query = "INSERT INTO items (item_name, description, location_found, founder, date_found) VALUES (@name, @description, @location, @founder, @date)";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
                 string date = dateTimePickerFound.Value.ToString("yyyy-MM-dd");
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@name", textName.Text);
@@ -55,7 +55,7 @@ namespace LostFoundTrackerApp.UserControls
                     MessageBox.Show("Gagal : Data Gagal Disimpan", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
-                conn.Close();
+                dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
             }
         }
     }

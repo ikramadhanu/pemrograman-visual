@@ -8,34 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using LostFoundTrackerApp.Helpers;  // Mengimpor namespace Helpers
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listBarang : UserControl
     {
-        string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-        MySqlConnection conn;
-        MySqlDataReader dr;
+        private DatabaseHelper dbHelper;  // Deklarasi objek DatabaseHelper
+        private MySqlDataReader dr;
 
         public listBarang()
         {
             InitializeComponent();
-            conn = new MySqlConnection(connstring);
+            dbHelper = new DatabaseHelper();  // Membuat instance DatabaseHelper
         }
 
         public void loadRecord()
         {
             dataGridView1.Rows.Clear();
-            conn.Open();
+            dbHelper.OpenConnection();  // Membuka koneksi ke database
             string query = "SELECT * FROM items";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, dr["id"].ToString(), dr["item_name"].ToString(), dr["description"].ToString(), dr["location_found"].ToString(), dr["founder"].ToString(), dr["date_found"].ToString());
             }
             dr.Close();
-            conn.Close();
+            dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
         }
 
         private void listBarang_Load(object sender, EventArgs e)
@@ -59,9 +59,9 @@ namespace LostFoundTrackerApp.UserControls
                 return;
             }
 
-            conn.Open();
+            dbHelper.OpenConnection();  // Membuka koneksi ke database
             string query = "SELECT * FROM items WHERE item_name LIKE @search";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
             cmd.Parameters.AddWithValue("@search", "%" + searchInput + "%");
 
             dr = cmd.ExecuteReader();
@@ -83,7 +83,7 @@ namespace LostFoundTrackerApp.UserControls
             }
             textBoxSearch.Clear();
             dr.Close();
-            conn.Close();
+            dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
 
             if (!hasData)
             {

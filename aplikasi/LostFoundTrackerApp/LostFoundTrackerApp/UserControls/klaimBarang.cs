@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using LostFoundTrackerApp.Helpers; // Mengimpor namespace Helpers
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class klaimBarang : UserControl
     {
-        string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-        MySqlConnection conn;
+        private DatabaseHelper dbHelper; // Deklarasi objek DatabaseHelper
         public klaimBarang()
         {
             InitializeComponent();
-            conn = new MySqlConnection(connstring);
+            dbHelper = new DatabaseHelper(); // Membuat instance DatabaseHelper
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,9 +30,9 @@ namespace LostFoundTrackerApp.UserControls
             }
             else
             {
-                conn.Open();
+                dbHelper.OpenConnection();
                 string query = "UPDATE items SET desc_bukti = @descbukti, claim_contact = @claimcontact, claim_name = @claimname, claim_date = @claimdate WHERE id = @id";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
                 string date = dateTimeClaim.Value.ToString("yyyy-MM-dd");
 
                 cmd.Parameters.Clear();
@@ -57,7 +57,7 @@ namespace LostFoundTrackerApp.UserControls
                     MessageBox.Show("Gagal : Data Gagal Disimpan", "KLAIM BARANG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
-                conn.Close();
+                dbHelper.CloseConnection();
             }
         }
     }

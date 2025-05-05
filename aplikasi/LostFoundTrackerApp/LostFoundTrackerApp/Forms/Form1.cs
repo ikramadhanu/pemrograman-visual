@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using LostFoundTrackerApp.Forms;
 using MySql.Data.MySqlClient;
+using LostFoundTrackerApp.Helpers;
 
 namespace LostFoundTrackerApp
 {
@@ -10,10 +11,12 @@ namespace LostFoundTrackerApp
         // Publisher untuk event login
         private LoginEventPublisher publisher;
         private LoginEventSubscriber subscriber;
+        private DatabaseHelper dbHelper;
 
         public Form1()
         {
             InitializeComponent();
+            dbHelper = new DatabaseHelper();  // Inisialisasi DatabaseHelper
             publisher = new LoginEventPublisher();
             subscriber = new LoginEventSubscriber(this);
             publisher.OnLoginAttempt += subscriber.OnLoginReceived;
@@ -21,18 +24,21 @@ namespace LostFoundTrackerApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-            using (MySqlConnection conn = new MySqlConnection(connstring))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    MessageBox.Show("KONEKSI BERHASIL", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                // Cek koneksi database saat form dimuat
+                dbHelper.OpenConnection();  // Membuka koneksi ke database
+                MessageBox.Show("Koneksi ke database berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Jika koneksi gagal
+                MessageBox.Show("Koneksi ke database gagal: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit(); // Menutup aplikasi jika koneksi gagal
+            }
+            finally
+            {
+                dbHelper.CloseConnection();  // Menutup koneksi setelah pengecekan selesai
             }
         }
 
@@ -54,7 +60,13 @@ namespace LostFoundTrackerApp
     public class LoginEventPublisher
     {
         // Event untuk memberitahukan status login
-        public event Action<string, bool> OnLoginAttempt;
+        public event Action<string, bool> OnLoginAttempt = delegate { }; // Inisialisasi dengan event kosong
+        private DatabaseHelper dbHelper;
+
+        public LoginEventPublisher()
+        {
+            dbHelper = new DatabaseHelper(); // Menggunakan kelas DatabaseHelper untuk koneksi
+        }
 
         public void AttemptLogin(string username, string password)
         {
@@ -64,24 +76,24 @@ namespace LostFoundTrackerApp
 
         private bool CheckLogin(string username, string password)
         {
-            string connstring = "server=localhost;uid=root;pwd=;database=lost_found_tracker";
-            using (MySqlConnection conn = new MySqlConnection(connstring))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT COUNT(*) FROM admin WHERE username=@username AND password=@password";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
+                dbHelper.OpenConnection();
+                string query = "SELECT COUNT(*) FROM admin WHERE username=@username AND password=@password";
+                MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count > 0;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                dbHelper.CloseConnection(); // Pastikan koneksi selalu ditutup setelah penggunaan
             }
         }
     }
