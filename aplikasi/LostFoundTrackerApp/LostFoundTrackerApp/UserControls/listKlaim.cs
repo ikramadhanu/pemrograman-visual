@@ -7,45 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using LostFoundTrackerApp.Helpers;  // Mengimpor namespace Helpers
+using LostFoundTrackerApp.Repositories; // Mengimpor repository listKlaim
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listKlaim : UserControl
     {
-        private DatabaseHelper dbHelper;  // Deklarasi objek DatabaseHelper
-        private MySqlDataReader dr;
+        private listKlaimRepository listKlaimRepo;  // Instance dari repository listKlaim
+
         public listKlaim()
         {
             InitializeComponent();
-            dbHelper = new DatabaseHelper();  // Membuat instance DatabaseHelper
+            listKlaimRepo = new listKlaimRepository();  // Inisialisasi objek listKlaimRepository
         }
 
+        // Fungsi untuk memuat data klaim
         public void loadRecord()
         {
             dataGridView1.Rows.Clear();
+
             try
             {
-                dbHelper.OpenConnection();  // Membuka koneksi ke database
+                var klaimList = listKlaimRepo.GetKlaimList(); // Ambil data klaim dari repository
 
-                string query = "SELECT id, claim_name, desc_bukti, claim_contact, claim_date FROM items WHERE claim_name IS NOT NULL AND claim_name != '';";
-                MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());  // Menggunakan koneksi dari dbHelper
-
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                foreach (var klaim in klaimList)
                 {
-                    dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, dr["id"].ToString(), dr["claim_name"].ToString(), dr["desc_bukti"].ToString(), dr["claim_contact"].ToString(), dr["claim_date"].ToString());
+                    dataGridView1.Rows.Add(
+                        dataGridView1.Rows.Count + 1,
+                        klaim["id"],
+                        klaim["claim_name"],
+                        klaim["desc_bukti"],
+                        klaim["claim_contact"],
+                        klaim["claim_date"]
+                    );
                 }
-                dr.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Gagal Memuat Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
             }
         }
 
@@ -75,16 +74,9 @@ namespace LostFoundTrackerApp.UserControls
             {
                 try
                 {
-                    dbHelper.OpenConnection();  // Membuka koneksi ke database
-                    string query = "DELETE FROM items WHERE id = @id";
-                    MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
-                    cmd.Parameters.AddWithValue("@id", deleteId);
+                    bool success = listKlaimRepo.DeleteKlaim(deleteId); // Hapus klaim dengan repository
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
-                    textBoxDelete.Clear();
-
-                    if (rowsAffected > 0)
+                    if (success)
                     {
                         MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadRecord();
@@ -102,3 +94,4 @@ namespace LostFoundTrackerApp.UserControls
         }
     }
 }
+

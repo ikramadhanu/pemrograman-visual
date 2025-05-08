@@ -7,35 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using LostFoundTrackerApp.Helpers;  // Mengimpor namespace Helpers
+using LostFoundTrackerApp.Repositories; // Mengimpor repository listBarang
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listBarang : UserControl
     {
-        private DatabaseHelper dbHelper;  // Deklarasi objek DatabaseHelper
-        private MySqlDataReader dr;
+        private listBarangRepository listBarangRepo;  // Instance dari repository listBarang
 
         public listBarang()
         {
             InitializeComponent();
-            dbHelper = new DatabaseHelper();  // Membuat instance DatabaseHelper
+            listBarangRepo = new listBarangRepository();  // Inisialisasi objek listBarangRepository
         }
 
+        // Fungsi untuk memuat semua data barang
         public void loadRecord()
         {
             dataGridView1.Rows.Clear();
-            dbHelper.OpenConnection();  // Membuka koneksi ke database
-            string query = "SELECT * FROM items";
-            MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+
+            try
             {
-                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, dr["id"].ToString(), dr["item_name"].ToString(), dr["description"].ToString(), dr["location_found"].ToString(), dr["founder"].ToString(), dr["date_found"].ToString());
+                var barangList = listBarangRepo.GetAllBarang(); // Ambil data barang dari repository
+
+                foreach (var barang in barangList)
+                {
+                    dataGridView1.Rows.Add(
+                        dataGridView1.Rows.Count + 1,
+                        barang["id"],
+                        barang["item_name"],
+                        barang["description"],
+                        barang["location_found"],
+                        barang["founder"],
+                        barang["date_found"]
+                    );
+                }
             }
-            dr.Close();
-            dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void listBarang_Load(object sender, EventArgs e)
@@ -59,36 +70,37 @@ namespace LostFoundTrackerApp.UserControls
                 return;
             }
 
-            dbHelper.OpenConnection();  // Membuka koneksi ke database
-            string query = "SELECT * FROM items WHERE item_name LIKE @search";
-            MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
-            cmd.Parameters.AddWithValue("@search", "%" + searchInput + "%");
-
-            dr = cmd.ExecuteReader();
-
-            bool hasData = false;
-
-            while (dr.Read())
+            try
             {
-                hasData = true;
-                dataGridView1.Rows.Add(
-                    dataGridView1.Rows.Count + 1,
-                    dr["id"].ToString(),
-                    dr["item_name"].ToString(),
-                    dr["description"].ToString(),
-                    dr["location_found"].ToString(),
-                    dr["founder"].ToString(),
-                    dr["date_found"].ToString()
-                );
+                var searchResults = listBarangRepo.SearchBarang(searchInput); // Cari barang dengan repository
+
+                if (searchResults.Count > 0)
+                {
+                    foreach (var barang in searchResults)
+                    {
+                        dataGridView1.Rows.Add(
+                            dataGridView1.Rows.Count + 1,
+                            barang["id"],
+                            barang["item_name"],
+                            barang["description"],
+                            barang["location_found"],
+                            barang["founder"],
+                            barang["date_found"]
+                        );
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan untuk kata kunci: " + searchInput, "Hasil Pencarian", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             textBoxSearch.Clear();
-            dr.Close();
-            dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
-
-            if (!hasData)
-            {
-                MessageBox.Show("Data tidak ditemukan untuk kata kunci: " + searchInput, "Hasil Pencarian", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
     }
 }
+

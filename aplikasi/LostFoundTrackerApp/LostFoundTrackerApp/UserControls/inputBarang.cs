@@ -7,56 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using LostFoundTrackerApp.Helpers;  // Mengimpor namespace Helpers
+using LostFoundTrackerApp.Repositories; // Mengimpor repository inputBarang
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class inputBarang : UserControl
     {
-        private DatabaseHelper dbHelper;  // Deklarasi objek DatabaseHelper
+        private inputBarangRepository inputBarangRepo;  // Instance dari repository inputBarang
+
         public inputBarang()
         {
             InitializeComponent();
-            dbHelper = new DatabaseHelper();  // Membuat instance DatabaseHelper
+            inputBarangRepo = new inputBarangRepository();  // Inisialisasi objek inputBarangRepository
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if ((textName.Text == string.Empty) || (textDesc.Text == string.Empty) || (textLocation.Text == string.Empty) || (textFounder.Text == string.Empty))
+            // Validasi form
+            if (string.IsNullOrWhiteSpace(textName.Text) ||
+                string.IsNullOrWhiteSpace(textDesc.Text) ||
+                string.IsNullOrWhiteSpace(textLocation.Text) ||
+                string.IsNullOrWhiteSpace(textFounder.Text))
             {
                 MessageBox.Show("Peringatan : Form Harus Diisi", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // Panggil repository untuk menyimpan data
+            bool success = inputBarangRepo.InsertBarang(
+                textName.Text,
+                textDesc.Text,
+                textLocation.Text,
+                textFounder.Text,
+                dateTimePickerFound.Value
+            );
+
+            // Menampilkan pesan hasil
+            if (success)
+            {
+                MessageBox.Show("Sukses : Data Berhasil Disimpan", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textName.Clear();
+                textDesc.Clear();
+                textLocation.Clear();
+                textFounder.Clear();
+                dateTimePickerFound.Value = DateTime.Now;
+            }
             else
             {
-                dbHelper.OpenConnection();  // Membuka koneksi ke database
-                string query = "INSERT INTO items (item_name, description, location_found, founder, date_found) VALUES (@name, @description, @location, @founder, @date)";
-                MySqlCommand cmd = new MySqlCommand(query, dbHelper.GetConnection());
-                string date = dateTimePickerFound.Value.ToString("yyyy-MM-dd");
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name", textName.Text);
-                cmd.Parameters.AddWithValue("@description", textDesc.Text);
-                cmd.Parameters.AddWithValue("@location", textLocation.Text);
-                cmd.Parameters.AddWithValue("@founder", textFounder.Text);
-                cmd.Parameters.AddWithValue("@date", date);
-
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    MessageBox.Show("Sukses : Data Berhasil Disimpan", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textName.Clear();
-                    textDesc.Clear();
-                    textLocation.Clear();
-                    textFounder.Clear();
-                    dateTimePickerFound.Value = DateTime.Now;
-                } else
-                {
-                    MessageBox.Show("Gagal : Data Gagal Disimpan", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
-                dbHelper.CloseConnection();  // Menutup koneksi setelah operasi selesai
+                MessageBox.Show("Gagal : Data Gagal Disimpan", "BARANG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
 }
+
