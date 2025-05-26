@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="UserControls\aboutUs.cs">
+    <Compile Update="Views\aboutUs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\dashboard.cs">
+    <Compile Update="Views\dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\Form1.cs">
@@ -13,16 +13,16 @@
     <Compile Update="Forms\formDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControls\inputBarang.cs">
+    <Compile Update="Views\inputBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\klaimBarang.cs">
+    <Compile Update="Views\klaimBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\listBarang.cs">
+    <Compile Update="Views\listBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\listKlaim.cs">
+    <Compile Update="Views\listKlaim.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

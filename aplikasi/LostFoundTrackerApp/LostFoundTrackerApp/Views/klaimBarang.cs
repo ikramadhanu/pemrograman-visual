@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LostFoundTrackerApp.Repositories; // pakai klaimBarangRepository
+using LostFoundTrackerApp.Controllers; 
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class klaimBarang : UserControl
     {
-        private klaimBarangRepository klaimRepo;
+        private KlaimBarangController controller;
 
         public klaimBarang()
         {
             InitializeComponent();
-            klaimRepo = new klaimBarangRepository();
+            controller = new KlaimBarangController();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace LostFoundTrackerApp.UserControls
                 return;
             }
 
-            bool success = klaimRepo.UpdateKlaimBarang(
+            bool success = controller.SimpanKlaim(
                 textID.Text,
                 textDescBukti.Text,
                 textClaimContact.Text,

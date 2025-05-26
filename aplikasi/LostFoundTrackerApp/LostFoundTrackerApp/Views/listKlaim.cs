@@ -7,28 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LostFoundTrackerApp.Repositories; // Mengimpor repository listKlaim
+using LostFoundTrackerApp.Controllers;
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listKlaim : UserControl
     {
-        private listKlaimRepository listKlaimRepo;  // Instance dari repository listKlaim
+        private ListKlaimController controller;
 
         public listKlaim()
         {
             InitializeComponent();
-            listKlaimRepo = new listKlaimRepository();  // Inisialisasi objek listKlaimRepository
+            controller = new ListKlaimController();
         }
 
-        // Fungsi untuk memuat data klaim
         public void loadRecord()
         {
             dataGridView1.Rows.Clear();
 
             try
             {
-                var klaimList = listKlaimRepo.GetKlaimList(); // Ambil data klaim dari repository
+                List<Dictionary<string, string>> klaimList = controller.AmbilSemuaKlaim();
 
                 foreach (var klaim in klaimList)
                 {
@@ -74,7 +73,7 @@ namespace LostFoundTrackerApp.UserControls
             {
                 try
                 {
-                    bool success = listKlaimRepo.DeleteKlaim(deleteId); // Hapus klaim dengan repository
+                    bool success = controller.HapusKlaim(deleteId);
 
                     if (success)
                     {

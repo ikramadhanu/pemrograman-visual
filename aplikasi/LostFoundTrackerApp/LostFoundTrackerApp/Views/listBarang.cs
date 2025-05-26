@@ -7,28 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LostFoundTrackerApp.Repositories; // Mengimpor repository listBarang
+using LostFoundTrackerApp.Controllers;
 
 namespace LostFoundTrackerApp.UserControls
 {
     public partial class listBarang : UserControl
     {
-        private listBarangRepository listBarangRepo;  // Instance dari repository listBarang
+        private ListBarangController controller;
 
         public listBarang()
         {
             InitializeComponent();
-            listBarangRepo = new listBarangRepository();  // Inisialisasi objek listBarangRepository
+            controller = new ListBarangController();
         }
 
-        // Fungsi untuk memuat semua data barang
         public void loadRecord()
         {
             dataGridView1.Rows.Clear();
 
             try
             {
-                var barangList = listBarangRepo.GetAllBarang(); // Ambil data barang dari repository
+                List<Dictionary<string, string>> barangList = controller.AmbilSemuaBarang();
 
                 foreach (var barang in barangList)
                 {
@@ -72,7 +71,7 @@ namespace LostFoundTrackerApp.UserControls
 
             try
             {
-                var searchResults = listBarangRepo.SearchBarang(searchInput); // Cari barang dengan repository
+                List<Dictionary<string, string>> searchResults = controller.CariBarang(searchInput);
 
                 if (searchResults.Count > 0)
                 {
@@ -100,6 +99,11 @@ namespace LostFoundTrackerApp.UserControls
             }
 
             textBoxSearch.Clear();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Bisa ditambahkan handler untuk event klik cell jika diperlukan
         }
     }
 }
