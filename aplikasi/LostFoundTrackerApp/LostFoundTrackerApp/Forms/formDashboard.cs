@@ -73,5 +73,11 @@ namespace LostFoundTrackerApp.Forms
             listKlaim1.BringToFront();
             labelTitle.Text = "Riwayat Klaim";
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            laporanHilang1.BringToFront();
+            labelTitle.Text = "Laporan Hilang";
+        }
     }
 }

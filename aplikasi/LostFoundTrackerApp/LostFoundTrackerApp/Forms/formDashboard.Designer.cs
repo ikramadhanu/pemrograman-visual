@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashboard));
             panel1 = new Panel();
+            panel8 = new Panel();
+            label7 = new Label();
+            pictureBox9 = new PictureBox();
             panel2 = new Panel();
             label6 = new Label();
             pictureBox8 = new PictureBox();
@@ -58,7 +61,10 @@
             klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
+            laporanHilang1 = new LostFoundTrackerApp.Views.laporanHilang();
             panel1.SuspendLayout();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel7.SuspendLayout();
@@ -79,6 +85,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 186, 46);
+            panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel6);
@@ -90,6 +97,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(241, 540);
             panel1.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(label7);
+            panel8.Controls.Add(pictureBox9);
+            panel8.Location = new Point(13, 423);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(205, 49);
+            panel8.TabIndex = 4;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Audiowide", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(58, 13);
+            label7.Name = "label7";
+            label7.Size = new Size(153, 22);
+            label7.TabIndex = 1;
+            label7.Text = "Laporan Hilang";
+            label7.Click += label7_Click;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(7, 7);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(47, 33);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 0;
+            pictureBox9.TabStop = false;
             // 
             // panel2
             // 
@@ -125,7 +162,7 @@
             // 
             panel7.Controls.Add(label5);
             panel7.Controls.Add(pictureBox6);
-            panel7.Location = new Point(13, 423);
+            panel7.Location = new Point(13, 480);
             panel7.Name = "panel7";
             panel7.Size = new Size(205, 49);
             panel7.TabIndex = 3;
@@ -306,6 +343,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(laporanHilang1);
             panelContainer.Controls.Add(listKlaim1);
             panelContainer.Controls.Add(listBarang1);
             panelContainer.Controls.Add(aboutUs1);
@@ -362,6 +400,13 @@
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
             // 
+            // laporanHilang1
+            // 
+            laporanHilang1.Location = new Point(0, -7);
+            laporanHilang1.Name = "laporanHilang1";
+            laporanHilang1.Size = new Size(875, 558);
+            laporanHilang1.TabIndex = 5;
+            // 
             // formDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -374,6 +419,9 @@
             Name = "formDashboard";
             Text = "formDashboard";
             panel1.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -430,5 +478,9 @@
         private Label label6;
         private PictureBox pictureBox8;
         private UserControls.listKlaim listKlaim1;
+        private Panel panel8;
+        private Label label7;
+        private PictureBox pictureBox9;
+        private Views.laporanHilang laporanHilang1;
     }
 }

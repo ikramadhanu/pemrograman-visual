@@ -19,6 +19,9 @@
     <Compile Update="Views\klaimBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\laporanHilang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\listBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
