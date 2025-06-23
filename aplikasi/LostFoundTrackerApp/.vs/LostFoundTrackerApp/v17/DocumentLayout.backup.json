@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\lostfoundtrackerapp\\views\\laporanhilang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\laporanhilang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\views\\laporanhilang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\laporanhilang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\lostfoundtrackerapp\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,15 +23,11 @@
       "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\laporanhilang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\views\\inputbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\lostfoundtrackerapp\\views\\inputbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\inputbarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\views\\laporanhilang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\laporanhilang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|d:\\kuliah\\semester 6\\pemograman visual\\aplikasi\\pemrograman-visual\\aplikasi\\lostfoundtrackerapp\\lostfoundtrackerapp\\views\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\lostfoundtrackerapp\\views\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{56E4D8ED-937F-4B64-8E58-42056BBC0CF0}|LostFoundTrackerApp\\LostFoundTrackerApp.csproj|solutionrelative:lostfoundtrackerapp\\views\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -94,12 +98,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "laporanHilang.Designer.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.Designer.cs",
+              "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\laporanHilang.Designer.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.Designer.cs*",
+              "RelativeToolTip": "LostFoundTrackerApp\\Views\\laporanHilang.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:54:39.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "laporanHilang.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\laporanHilang.cs",
-              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs",
-              "RelativeToolTip": "LostFoundTrackerApp\\Views\\laporanHilang.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs*",
+              "RelativeToolTip": "LostFoundTrackerApp\\Views\\laporanHilang.cs*",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T23:19:37.897Z",
@@ -107,68 +124,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "inputBarang.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\inputBarang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\inputBarang.cs",
               "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\inputBarang.cs [Design]",
               "RelativeToolTip": "LostFoundTrackerApp\\Views\\inputBarang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:15:57.136Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-16T23:15:57.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "laporanHilang.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\laporanHilang.cs",
-              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs [Design]",
-              "RelativeToolTip": "LostFoundTrackerApp\\Views\\laporanHilang.cs [Design]",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\laporanHilang.cs [Design]*",
+              "RelativeToolTip": "LostFoundTrackerApp\\Views\\laporanHilang.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T23:09:29.865Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "formDashboard.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Forms\\formDashboard.cs",
-              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs*",
-              "RelativeToolTip": "LostFoundTrackerApp\\Forms\\formDashboard.cs*",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs",
+              "RelativeToolTip": "LostFoundTrackerApp\\Forms\\formDashboard.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T23:04:00.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "formDashboard.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Forms\\formDashboard.cs",
-              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs [Design]*",
-              "RelativeToolTip": "LostFoundTrackerApp\\Forms\\formDashboard.cs [Design]*",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Forms\\formDashboard.cs [Design]",
+              "RelativeToolTip": "LostFoundTrackerApp\\Forms\\formDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:02:41.463Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-16T23:02:41.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dashboard.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\dashboard.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\dashboard.cs",
               "ToolTip": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\dashboard.cs [Design]",
               "RelativeToolTip": "LostFoundTrackerApp\\Views\\dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:09:48.539Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-16T23:09:48.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "klaimBarangController.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Controllers\\klaimBarangController.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Controllers\\klaimBarangController.cs",
@@ -176,12 +190,11 @@
               "RelativeToolTip": "LostFoundTrackerApp\\Controllers\\klaimBarangController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:33:20.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T13:33:20.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "klaimBarang.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\klaimBarang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\klaimBarang.cs",
@@ -189,12 +202,11 @@
               "RelativeToolTip": "LostFoundTrackerApp\\Views\\klaimBarang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:31:13.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T13:31:13.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "inputBarangController.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Controllers\\inputBarangController.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Controllers\\inputBarangController.cs",
@@ -206,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "aboutUs.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\aboutUs.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\aboutUs.cs",
@@ -219,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "inputBarang.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\inputBarang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\inputBarang.cs",
@@ -227,12 +239,11 @@
               "RelativeToolTip": "LostFoundTrackerApp\\Views\\inputBarang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T12:54:21.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T12:54:21.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "listBarangController.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Controllers\\listBarangController.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Controllers\\listBarangController.cs",
@@ -244,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "listKlaimController.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Controllers\\listKlaimController.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Controllers\\listKlaimController.cs",
@@ -256,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "listBarang.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\listBarang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\listBarang.cs",
@@ -269,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "listKlaim.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\listKlaim.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\listKlaim.cs",
@@ -281,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "aboutUs.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\aboutUs.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\aboutUs.cs",
@@ -292,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "inputBarangRepository.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Repositories\\inputBarangRepository.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Repositories\\inputBarangRepository.cs",
@@ -304,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Helpers\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Helpers\\DatabaseHelper.cs",
@@ -316,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "listBarang.cs [Design]",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 6\\PEMOGRAMAN VISUAL\\APLIKASI\\pemrograman-visual\\aplikasi\\LostFoundTrackerApp\\LostFoundTrackerApp\\Views\\listBarang.cs",
               "RelativeDocumentMoniker": "LostFoundTrackerApp\\Views\\listBarang.cs",

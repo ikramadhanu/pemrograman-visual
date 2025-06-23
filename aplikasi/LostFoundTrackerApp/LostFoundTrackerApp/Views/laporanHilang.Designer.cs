@@ -46,11 +46,11 @@
             buttonSave.BackColor = Color.FromArgb(255, 186, 46);
             buttonSave.BackgroundImageLayout = ImageLayout.None;
             buttonSave.Font = new Font("Audiowide", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonSave.Location = new Point(526, 363);
+            buttonSave.Location = new Point(336, 363);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(133, 44);
+            buttonSave.Size = new Size(323, 44);
             buttonSave.TabIndex = 21;
-            buttonSave.Text = "SAVE";
+            buttonSave.Text = "BUAT LAPORAN";
             buttonSave.UseVisualStyleBackColor = false;
             // 
             // dateTimePickerFound
