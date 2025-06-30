@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             buttonSave = new Button();
-            dateTimePickerFound = new DateTimePicker();
+            dateTimePickerMissing = new DateTimePicker();
             label5 = new Label();
             textDesc = new TextBox();
             label2 = new Label();
             textName = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            textLoc = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            textAddress = new TextBox();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -52,13 +52,14 @@
             buttonSave.TabIndex = 21;
             buttonSave.Text = "BUAT LAPORAN";
             buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
             // 
-            // dateTimePickerFound
+            // dateTimePickerMissing
             // 
-            dateTimePickerFound.Location = new Point(42, 261);
-            dateTimePickerFound.Name = "dateTimePickerFound";
-            dateTimePickerFound.Size = new Size(250, 27);
-            dateTimePickerFound.TabIndex = 20;
+            dateTimePickerMissing.Location = new Point(42, 261);
+            dateTimePickerMissing.Name = "dateTimePickerMissing";
+            dateTimePickerMissing.Size = new Size(250, 27);
+            dateTimePickerMissing.TabIndex = 20;
             // 
             // label5
             // 
@@ -76,6 +77,7 @@
             textDesc.Name = "textDesc";
             textDesc.Size = new Size(617, 27);
             textDesc.TabIndex = 14;
+            textDesc.TextChanged += textDesc_TextChanged;
             // 
             // label2
             // 
@@ -104,12 +106,12 @@
             label1.TabIndex = 11;
             label1.Text = "Pelapor";
             // 
-            // textBox1
+            // textLoc
             // 
-            textBox1.Location = new Point(42, 322);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(617, 27);
-            textBox1.TabIndex = 23;
+            textLoc.Location = new Point(42, 322);
+            textLoc.Name = "textLoc";
+            textLoc.Size = new Size(617, 27);
+            textLoc.TabIndex = 23;
             // 
             // label3
             // 
@@ -122,12 +124,12 @@
             label3.Text = "Tempat Kehilangan";
             label3.Click += label3_Click;
             // 
-            // textBox2
+            // textAddress
             // 
-            textBox2.Location = new Point(42, 133);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(617, 27);
-            textBox2.TabIndex = 25;
+            textAddress.Location = new Point(42, 133);
+            textAddress.Name = "textAddress";
+            textAddress.Size = new Size(617, 27);
+            textAddress.TabIndex = 25;
             // 
             // label4
             // 
@@ -143,12 +145,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(textBox2);
+            Controls.Add(textAddress);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(textLoc);
             Controls.Add(label3);
             Controls.Add(buttonSave);
-            Controls.Add(dateTimePickerFound);
+            Controls.Add(dateTimePickerMissing);
             Controls.Add(label5);
             Controls.Add(textDesc);
             Controls.Add(label2);
@@ -163,15 +165,15 @@
         #endregion
 
         private Button buttonSave;
-        private DateTimePicker dateTimePickerFound;
+        private DateTimePicker dateTimePickerMissing;
         private Label label5;
         private TextBox textDesc;
         private Label label2;
         private TextBox textName;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textLoc;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox textAddress;
         private Label label4;
     }
 }
