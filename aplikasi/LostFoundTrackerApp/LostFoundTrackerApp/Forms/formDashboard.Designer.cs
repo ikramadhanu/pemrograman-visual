@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDashboard));
             panel1 = new Panel();
+            panel9 = new Panel();
+            label8 = new Label();
+            pictureBox10 = new PictureBox();
             panel8 = new Panel();
             label7 = new Label();
             pictureBox9 = new PictureBox();
@@ -55,14 +58,17 @@
             labelTitle = new Label();
             pictureBox7 = new PictureBox();
             panelContainer = new Panel();
+            laporanHilang1 = new LostFoundTrackerApp.Views.laporanHilang();
             listKlaim1 = new LostFoundTrackerApp.UserControls.listKlaim();
             listBarang1 = new LostFoundTrackerApp.UserControls.listBarang();
             aboutUs1 = new LostFoundTrackerApp.UserControls.aboutUs();
             klaimBarang1 = new LostFoundTrackerApp.UserControls.klaimBarang();
             inputBarang1 = new LostFoundTrackerApp.UserControls.inputBarang();
             dashboard1 = new dashboard();
-            laporanHilang1 = new LostFoundTrackerApp.Views.laporanHilang();
+            listLaporan1 = new LostFoundTrackerApp.Views.listLaporan();
             panel1.SuspendLayout();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             panel2.SuspendLayout();
@@ -85,6 +91,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 186, 46);
+            panel1.Controls.Add(panel9);
             panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panel7);
@@ -98,11 +105,41 @@
             panel1.Size = new Size(241, 540);
             panel1.TabIndex = 0;
             // 
+            // panel9
+            // 
+            panel9.Controls.Add(label8);
+            panel9.Controls.Add(pictureBox10);
+            panel9.Location = new Point(13, 432);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(185, 49);
+            panel9.TabIndex = 4;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Audiowide", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(58, 13);
+            label8.Name = "label8";
+            label8.Size = new Size(132, 22);
+            label8.TabIndex = 1;
+            label8.Text = "List Laporan";
+            label8.Click += label8_Click;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(7, 7);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(47, 33);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 0;
+            pictureBox10.TabStop = false;
+            // 
             // panel8
             // 
             panel8.Controls.Add(label7);
             panel8.Controls.Add(pictureBox9);
-            panel8.Location = new Point(13, 423);
+            panel8.Location = new Point(13, 377);
             panel8.Name = "panel8";
             panel8.Size = new Size(205, 49);
             panel8.TabIndex = 4;
@@ -132,7 +169,7 @@
             // 
             panel2.Controls.Add(label6);
             panel2.Controls.Add(pictureBox8);
-            panel2.Location = new Point(13, 365);
+            panel2.Location = new Point(13, 319);
             panel2.Name = "panel2";
             panel2.Size = new Size(205, 49);
             panel2.TabIndex = 4;
@@ -162,7 +199,7 @@
             // 
             panel7.Controls.Add(label5);
             panel7.Controls.Add(pictureBox6);
-            panel7.Location = new Point(13, 480);
+            panel7.Location = new Point(13, 488);
             panel7.Name = "panel7";
             panel7.Size = new Size(205, 49);
             panel7.TabIndex = 3;
@@ -192,7 +229,7 @@
             // 
             panel6.Controls.Add(label4);
             panel6.Controls.Add(pictureBox5);
-            panel6.Location = new Point(13, 306);
+            panel6.Location = new Point(13, 260);
             panel6.Name = "panel6";
             panel6.Size = new Size(196, 49);
             panel6.TabIndex = 3;
@@ -222,7 +259,7 @@
             // 
             panel5.Controls.Add(label3);
             panel5.Controls.Add(pictureBox4);
-            panel5.Location = new Point(13, 247);
+            panel5.Location = new Point(13, 201);
             panel5.Name = "panel5";
             panel5.Size = new Size(185, 49);
             panel5.TabIndex = 3;
@@ -252,7 +289,7 @@
             // 
             panel4.Controls.Add(label2);
             panel4.Controls.Add(pictureBox3);
-            panel4.Location = new Point(13, 189);
+            panel4.Location = new Point(13, 143);
             panel4.Name = "panel4";
             panel4.Size = new Size(196, 49);
             panel4.TabIndex = 3;
@@ -283,7 +320,7 @@
             // 
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(13, 130);
+            panel3.Location = new Point(13, 84);
             panel3.Name = "panel3";
             panel3.Size = new Size(185, 49);
             panel3.TabIndex = 2;
@@ -315,7 +352,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(83, 23);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(78, 91);
+            pictureBox1.Size = new Size(56, 55);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -343,6 +380,7 @@
             // 
             // panelContainer
             // 
+            panelContainer.Controls.Add(listLaporan1);
             panelContainer.Controls.Add(laporanHilang1);
             panelContainer.Controls.Add(listKlaim1);
             panelContainer.Controls.Add(listBarang1);
@@ -354,6 +392,13 @@
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(700, 446);
             panelContainer.TabIndex = 4;
+            // 
+            // laporanHilang1
+            // 
+            laporanHilang1.Location = new Point(0, -7);
+            laporanHilang1.Name = "laporanHilang1";
+            laporanHilang1.Size = new Size(875, 558);
+            laporanHilang1.TabIndex = 5;
             // 
             // listKlaim1
             // 
@@ -400,12 +445,12 @@
             dashboard1.Size = new Size(700, 446);
             dashboard1.TabIndex = 0;
             // 
-            // laporanHilang1
+            // listLaporan1
             // 
-            laporanHilang1.Location = new Point(0, -7);
-            laporanHilang1.Name = "laporanHilang1";
-            laporanHilang1.Size = new Size(875, 558);
-            laporanHilang1.TabIndex = 5;
+            listLaporan1.Location = new Point(0, 0);
+            listLaporan1.Name = "listLaporan1";
+            listLaporan1.Size = new Size(875, 558);
+            listLaporan1.TabIndex = 6;
             // 
             // formDashboard
             // 
@@ -419,6 +464,9 @@
             Name = "formDashboard";
             Text = "formDashboard";
             panel1.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -482,5 +530,9 @@
         private Label label7;
         private PictureBox pictureBox9;
         private Views.laporanHilang laporanHilang1;
+        private Panel panel9;
+        private Label label8;
+        private PictureBox pictureBox10;
+        private Views.listLaporan listLaporan1;
     }
 }

@@ -58,3 +58,4 @@ D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\Lost
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.UserControls.listBarang.resources
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.UserControls.listKlaim.resources
 D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.Views.laporanHilang.resources
+D:\KULIAH\SEMESTER 6\PEMOGRAMAN VISUAL\APLIKASI\pemrograman-visual\aplikasi\LostFoundTrackerApp\LostFoundTrackerApp\obj\Debug\net8.0-windows\LostFoundTrackerApp.Views.listLaporan.resources

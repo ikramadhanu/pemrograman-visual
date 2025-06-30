@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 01, 2025 at 03:08 PM
+-- Generation Time: Jun 30, 2025 at 12:29 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.10
 
@@ -65,7 +65,32 @@ CREATE TABLE `items` (
 
 INSERT INTO `items` (`id`, `item_name`, `description`, `location_found`, `founder`, `date_found`, `desc_bukti`, `claim_name`, `claim_contact`, `claim_date`) VALUES
 (1, 'Payung', 'Warna Hitam, Ukuran Kecil', 'Lab Komputer F3', 'Tyan', '2025-04-21', '', '', '', NULL),
-(4, 'Buku', 'Novel berjudul \"Ada Apa Dengan Cinta?\"', 'Kantin', 'Aziz', '2025-05-01', 'Bukti nota pembelian', 'Ririn', '089765543425', '2025-05-01');
+(4, 'Buku', 'Novel berjudul \"Ada Apa Dengan Cinta?\"', 'Kantin', 'Aziz', '2025-05-01', 'Bukti nota pembelian', 'Ririn', '089765543425', '2025-05-01'),
+(7, 'Kalung', 'warna emas', 'Gazebo', 'Damar', '2025-05-07', 'nota', 'Nimas', '089777666555', '2025-05-08'),
+(8, 'HP', 'merk asus', 'kamar mandi', 'Yumna', '2025-05-08', 'Pola sesuai', 'Wafi', '098876767543', '2025-05-26'),
+(10, 'Kacamata', 'Warna kuning lensa hitam', 'Parkiran', 'Dani', '2025-06-30', NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `report`
+--
+
+CREATE TABLE `report` (
+  `id` int NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `loc` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `report`
+--
+
+INSERT INTO `report` (`id`, `name`, `address`, `description`, `date`, `loc`) VALUES
+(2, 'Rizal', 'Tegal', 'Motor Merah Jupiter', '2025-06-30', 'Parkiran Timur');
 
 --
 -- Indexes for dumped tables
@@ -85,6 +110,12 @@ ALTER TABLE `items`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `report`
+--
+ALTER TABLE `report`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -98,7 +129,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `report`
+--
+ALTER TABLE `report`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

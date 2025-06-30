@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LostFoundTrackerApp.Controllers;
 
-namespace LostFoundTrackerApp.UserControls
+namespace LostFoundTrackerApp.Views
 {
-    public partial class listKlaim : UserControl
+    public partial class listLaporan : UserControl
     {
-        private ListKlaimController controller;
-        public listKlaim()
+        private ListLaporanController controller;
+        public listLaporan()
         {
             InitializeComponent();
-            controller = new ListKlaimController();
+            controller = new ListLaporanController();
         }
 
         public void loadRecord()
@@ -26,17 +26,18 @@ namespace LostFoundTrackerApp.UserControls
 
             try
             {
-                List<Dictionary<string, string>> klaimList = controller.AmbilSemuaKlaim();
+                List<Dictionary<string, string>> klaimList = controller.AmbilSemuaLaporan();
 
                 foreach (var klaim in klaimList)
                 {
                     dataGridView1.Rows.Add(
                         dataGridView1.Rows.Count + 1,
                         klaim["id"],
-                        klaim["claim_name"],
-                        klaim["desc_bukti"],
-                        klaim["claim_contact"],
-                        klaim["claim_date"]
+                        klaim["name"],
+                        klaim["address"],
+                        klaim["description"],
+                        klaim["date"],
+                        klaim["loc"]
                     );
                 }
             }
@@ -46,7 +47,7 @@ namespace LostFoundTrackerApp.UserControls
             }
         }
 
-        private void listKlaim_Load(object sender, EventArgs e)
+        private void listLaporan_Load(object sender, EventArgs e)
         {
             loadRecord();
         }
@@ -72,7 +73,7 @@ namespace LostFoundTrackerApp.UserControls
             {
                 try
                 {
-                    bool success = controller.HapusKlaim(deleteId);
+                    bool success = controller.HapusLaporan(deleteId);
 
                     if (success)
                     {
@@ -92,4 +93,3 @@ namespace LostFoundTrackerApp.UserControls
         }
     }
 }
-

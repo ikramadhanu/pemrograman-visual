@@ -28,5 +28,8 @@
     <Compile Update="Views\listKlaim.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\listLaporan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
